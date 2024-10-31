@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils'
 const montserrat = localFont({
   src: '../../public/fonts/Montserrat.ttf',
   variable: '--montserrat',
-  weight: '400',
+  weight: '100 650',
 })
 
 export const metadata: Metadata = {

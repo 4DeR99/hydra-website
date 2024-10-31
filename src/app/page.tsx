@@ -5,7 +5,7 @@ import { NavigationBar } from '@/components/shared/NavigationBar'
 
 export default function Home() {
   return (
-    <main className="font-montserrat relative h-screen overflow-hidden">
+    <main className="relative h-screen overflow-hidden font-montserrat">
       <Hero />
       <NavigationBar />
     </main>

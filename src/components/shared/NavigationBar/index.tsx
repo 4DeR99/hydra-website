@@ -27,17 +27,17 @@ const navBarItems = [
 
 export const NavigationBar = () => {
   return (
-    <nav className="~h-[3rem]/[6.44rem] absolute top-4 w-full">
+    <nav className="absolute top-4 w-full ~h-[4rem]/[6.44rem]">
       <Container className="flex items-center justify-between">
         <Image
           src={Hydra}
           alt="logo"
           width={193}
           height={103}
-          className="w-[15.17%]"
+          className="h-[90%] w-fit"
         />
-        <div className="~gap-12/20 hidden items-center uppercase lg:flex">
-          <ul className="~text-[0.75rem]/lg ~gap-6/10 flex font-extrabold">
+        <div className="hidden items-center uppercase ~gap-12/20 lg:flex">
+          <ul className="flex font-extrabold ~text-[0.75rem]/lg ~gap-6/10">
             {navBarItems.map((navItem) => (
               <li key={navItem.title}>
                 <a
@@ -49,7 +49,7 @@ export const NavigationBar = () => {
               </li>
             ))}
           </ul>
-          <div className="~gap-5/8 flex">
+          <div className="flex ~gap-5/8">
             <Button type="outlined">Contact us</Button>
             <Button className="">Join hydra</Button>
           </div>

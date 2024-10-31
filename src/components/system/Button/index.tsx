@@ -4,7 +4,7 @@ import { HTMLAttributes } from 'react'
 import { cn } from '@/lib/utils'
 
 const buttonStyles = cva(
-  '~px-4/8 ~py-2/3 uppercase rounded-[2.5rem] font-bold ~text-[0.65rem]/[1rem] hover:bg-accent hover:text-white transition-colors duration-300',
+  '~px-4/8 ~py-4/6 md:~py-2/3 uppercase rounded-[2.5rem] font-bold ~text-[0.65rem]/[1rem] hover:bg-accent hover:text-white transition-colors duration-300',
   {
     variants: {
       type: {

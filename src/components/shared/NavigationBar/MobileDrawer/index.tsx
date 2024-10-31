@@ -33,7 +33,7 @@ export const MobileDrawer = () => {
           )}
           onClick={() => handleDrawer()}
         />
-        <div className="bg-accent h-full w-full !overflow-auto sm:max-w-[300px]"></div>
+        <div className="h-full w-full !overflow-auto bg-accent sm:max-w-[300px]"></div>
       </Drawer>
     </div>
   )
