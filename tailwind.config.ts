@@ -12,7 +12,12 @@ const config: Config = {
   },
   theme: {
     extend: {
-      screens,
+      screens: {
+        ...screens,
+        '2xsm': '20rem',
+        xsm: '23.4375rem',
+        bsm: '26.5625rem',
+      },
       fontSize,
       colors: {
         background: 'var(--background)',
