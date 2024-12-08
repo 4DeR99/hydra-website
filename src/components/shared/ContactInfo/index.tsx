@@ -12,7 +12,7 @@ export const ContactInfo = () => {
   return (
     <div
       className={cn(
-        'absolute -bottom-[15%] left-0 hidden w-full items-center justify-around rounded-[90px] bg-gradient-to-r from-[#211E2E] from-[15%] via-[#3A3456] to-[#211E2E] to-[85%] px-12 ~h-[5rem]/[9.5rem]',
+        'absolute -bottom-[15%] left-0 hidden w-full items-center justify-around rounded-[90px] bg-gradient-to-r from-[#211E2E] from-[15%] via-[#3A3456] to-[#211E2E] to-[85%] px-12 ~md/laptop:~h-[5rem]/[9.5rem]',
         'sm:flex 2xl:relative',
       )}
     >
@@ -56,10 +56,10 @@ const InfoCard = ({ description, icon, title, iconStyle }: InfoCardProps) => {
         className={cn(iconStyle)}
       />
       <div className="flex flex-col gap-2">
-        <h3 className="invisible ~text-[0.8rem]/[1.5rem] sm:visible">
+        <h3 className="invisible ~md/laptop:~text-[0.8rem]/[1.5rem] sm:visible">
           {title}
         </h3>
-        <p className="~text-[0.5rem]/[0.875rem]">{description}</p>
+        <p className="~md/laptop:~text-[0.5rem]/[0.875rem]">{description}</p>
       </div>
     </div>
   )

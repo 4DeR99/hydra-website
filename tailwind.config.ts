@@ -17,6 +17,7 @@ const config: Config = {
         '2xsm': '20rem',
         xsm: '23.4375rem',
         bsm: '26.5625rem',
+        laptop: '90rem',
       },
       fontSize,
       colors: {
