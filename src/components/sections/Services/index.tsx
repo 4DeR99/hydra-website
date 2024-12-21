@@ -1,17 +1,21 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 import React from 'react'
 
 import { Arrow } from '@/components/icons'
 import { ServiceCard } from '@/components/shared/ServiceCard'
 import { Container } from '@/components/system/Container'
+import { HeadlessCardsCarousel } from '@/components/system/HeadlessCardsCarousel'
 import { cn } from '@/lib/utils'
 
 import { services } from './constant'
 
 export const Services = () => {
   useGSAP(() => {
+    if (typeof window === 'undefined') return
+    if (window.innerWidth < 768) return
     gsap.registerPlugin(ScrollTrigger)
     const scrollTargets = document.querySelectorAll('.scroll-item')
 
@@ -43,15 +47,14 @@ export const Services = () => {
         tl.to(
           `.card-${index}`,
           {
-            transform: `translateX(-${150 - 5 * index}%) translateY(${10 * index}%)`,
-            scale: 0.8,
+            transform: `translateX(-${140 - 2 * index}%) translateY(${5 * index}%) scale(0.8)`,
             ease: 'power1.out',
           },
           0,
         ).to(
           `.card-${index + 1}`,
           {
-            scale: 1.5,
+            scale: 1.1,
             ease: 'power2.out',
           },
           0,
@@ -62,7 +65,7 @@ export const Services = () => {
 
   return (
     <section className="services-container relative my-[2.5rem] w-full overflow-hidden py-[2.5rem]">
-      <Container className="h-auto">
+      <Container className="flex h-auto flex-col items-center gap-10">
         <div className="flex">
           <div className="flex grow flex-col items-center gap-2 uppercase ~text-[1.25rem]/[2.25rem] md:items-start">
             <h1 className="font-bold">Why build</h1>
@@ -82,8 +85,55 @@ export const Services = () => {
             in. Lectus magna fringilla urna porttitor rhoncus vitae.
           </div>
         </div>
+        <HeadlessCardsCarousel cardsCount={services.length}>
+          {({ currentCardIndex, handleNextClick, handlePrevClick }) => (
+            <div className="relative max-w-[320px] md:hidden">
+              {services.map((service, index) => (
+                <ServiceCard
+                  key={service.title}
+                  {...service}
+                  className={cn(
+                    'absolute left-0 top-0 w-full transition-opacity duration-150',
+                    { relative: index === 0 },
+                    {
+                      'opacity-0': index !== currentCardIndex,
+                    },
+                  )}
+                  style={{
+                    zIndex: services.length - index,
+                  }}
+                />
+              ))}
+              <button
+                className={cn(
+                  'absolute left-0 top-[47%] z-10 flex size-12 translate-x-[-50%] items-center justify-center',
+                  'rounded-full border-[5px] border-[#0E0E0E]/60 bg-accent',
+                  {
+                    'cursor-not-allowed opacity-15': currentCardIndex === 0,
+                  },
+                )}
+                onClick={handlePrevClick}
+              >
+                <ChevronLeft className="text-black/60" />
+              </button>
+              <button
+                className={cn(
+                  'absolute right-0 top-[47%] z-10 flex size-12 translate-x-[50%] items-center justify-center',
+                  'rounded-full border-[5px] border-[#0E0E0E]/60 bg-accent',
+                  {
+                    'cursor-not-allowed opacity-15':
+                      currentCardIndex === services.length - 1,
+                  },
+                )}
+                onClick={handleNextClick}
+              >
+                <ChevronRight className="text-black/60" />
+              </button>
+            </div>
+          )}
+        </HeadlessCardsCarousel>
       </Container>
-      <div className="scroll-target flex min-h-[500px] w-fit">
+      <div className="scroll-target hidden min-h-[500px] w-fit md:flex">
         {services.map((service) => (
           <div
             key={service.title}
@@ -97,7 +147,7 @@ export const Services = () => {
                 key={service.title}
                 {...service}
                 className={cn(
-                  'absolute left-0 top-0 h-[250px] w-[650px] scale-150',
+                  'absolute left-0 top-0 h-[250px] w-[650px] scale-[1.1]',
                   { 'scale-50': index !== 0 },
                   `card-${index}`,
                 )}

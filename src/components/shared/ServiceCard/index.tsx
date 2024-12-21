@@ -1,6 +1,7 @@
 import Image, { StaticImageData } from 'next/image'
 import React, { HTMLAttributes } from 'react'
 
+import { Button } from '@/components/system/Button'
 import { cn } from '@/lib/utils'
 
 interface ServiceCardProps {
@@ -19,7 +20,7 @@ export const ServiceCard = ({
   return (
     <div
       className={cn(
-        'flex items-center gap-6 rounded-[40px] bg-[radial-gradient(#433D60,#211E2E)] p-6',
+        'flex flex-col items-center gap-6 rounded-[40px] bg-[radial-gradient(#433D60,#211E2E)] p-6 md:flex-row',
         className,
       )}
       {...props}
@@ -31,10 +32,13 @@ export const ServiceCard = ({
           className="rounded-full object-contain"
         />
       </div>
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col items-center gap-3">
         <h1 className="font-bold ~text-xl/2xl">{title}</h1>
-        <div className="w-full border-t border-accent" />
-        <p>{description}</p>
+        <div className="w-[60%] border-t border-accent md:w-full" />
+        <p className="text-center md:text-start">{description}</p>
+        <Button className="w-full min-w-[60%] md:mx-auto md:w-auto md:scale-75">
+          Try it now
+        </Button>
       </div>
     </div>
   )
