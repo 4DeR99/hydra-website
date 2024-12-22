@@ -64,7 +64,7 @@ export const Services = () => {
   })
 
   return (
-    <section className="services-container relative my-[2.5rem] w-full overflow-hidden py-[2.5rem]">
+    <section className="services-container relative my-[1.5rem] w-full overflow-hidden py-[1.5rem] md:my-[2.5rem] md:py-[2rem]">
       <Container className="flex h-auto flex-col items-center gap-10">
         <div className="flex">
           <div className="flex grow flex-col items-center gap-2 uppercase ~text-[1.25rem]/[2.25rem] md:items-start">
