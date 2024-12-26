@@ -4,7 +4,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import React from 'react'
 
-import { Arrow } from '@/components/icons'
+import { SectionHeader } from '@/components/shared/SectionHeader'
 import { ServiceCard } from '@/components/shared/ServiceCard'
 import { Container } from '@/components/system/Container'
 import { HeadlessCardsCarousel } from '@/components/system/HeadlessCardsCarousel'
@@ -66,25 +66,11 @@ export const Services = () => {
   return (
     <section className="services-container relative my-[1.5rem] w-full overflow-hidden py-[1.5rem] md:my-[2.5rem] md:py-[2rem]">
       <Container className="flex h-auto flex-col items-center gap-10">
-        <div className="flex">
-          <div className="flex grow flex-col items-center gap-2 uppercase ~text-[1.25rem]/[2.25rem] md:items-start">
-            <h1 className="font-bold">Why build</h1>
-            <div className="flex items-center gap-7">
-              <span className="font-light">with hydra?</span>
-              <div className="hidden items-center md:flex">
-                <div className="-mr-2 h-[3px] rounded-full bg-accent-foreground ~md/laptop:~w-4/32" />
-                <Arrow />
-              </div>
-            </div>
-          </div>
-          <div className="hidden w-[51.1%] ~text-[0.875rem]/[1rem] md:block">
-            Vitae sapien pellentesque habitant morbi tristique senectus et netus
-            et. Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit
-            amet mauris commodo quis imperdiet massa tincidunt nunc. Viverra
-            aliquet eget sit amet tellus. Ornare lectus sit amet est placerat
-            in. Lectus magna fringilla urna porttitor rhoncus vitae.
-          </div>
-        </div>
+        <SectionHeader
+          title="Why build"
+          subtitle="with hydra?"
+          description="Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare lectus sit amet est placerat in. Lectus magna fringilla urna porttitor rhoncus vitae."
+        />
         <HeadlessCardsCarousel cardsCount={services.length}>
           {({ currentCardIndex, handleNextClick, handlePrevClick }) => (
             <div className="relative max-w-[320px] md:hidden">

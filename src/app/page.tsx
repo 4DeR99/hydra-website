@@ -4,6 +4,7 @@ import Lenis from 'lenis'
 import { useEffect } from 'react'
 
 import { Hero } from '@/components/sections/Hero'
+import { HowWeBuild } from '@/components/sections/HowWeBuild'
 import { Introduction } from '@/components/sections/Introduction'
 import { Services } from '@/components/sections/Services'
 import { TechnologiesAndHardware } from '@/components/sections/TechnologiesAndHardware'
@@ -24,6 +25,7 @@ export default function Home() {
       <NavigationBar />
       <Services />
       <TechnologiesAndHardware />
+      <HowWeBuild />
     </main>
   )
 }
