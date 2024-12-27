@@ -41,8 +41,8 @@ export const HowWeBuild = () => {
         trigger: scrollTargets[0],
         endTrigger: scrollTargets[scrollTargets.length - 1],
         containerAnimation: scrollTween,
-        start: 'right 90%',
-        end: 'left 10%',
+        start: 'right 50%',
+        end: 'right 10%',
         scrub: 1,
       },
     })
@@ -72,7 +72,7 @@ export const HowWeBuild = () => {
       className="relative my-[1.5rem] flex w-full flex-col overflow-hidden py-[1.5rem] md:my-[2.5rem] md:py-[2rem]"
       ref={sectionRef}
     >
-      <Background className="absolute left-0 top-[35%] hidden md:block" />
+      <Background className="absolute left-0 top-[35%] hidden w-full md:block" />
       <div
         className="absolute right-0 top-[35%] h-[170px] w-full bg-background"
         ref={backgroundCoverRef}
@@ -138,8 +138,7 @@ export const HowWeBuild = () => {
           ></div>
         ))}
         <div className={cn('w-screen flex-shrink-0', `step-item`)}></div>
-        <div className={cn('w-screen flex-shrink-0', `step-item`)}></div>
-        <div className="absolute inset-0 flex h-full w-full items-center justify-center gap-[100px]">
+        <div className="absolute inset-0 flex h-full w-full items-center justify-evenly">
           {STEPS.map((step, index) => (
             <StepNumber
               key={index}
