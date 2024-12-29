@@ -64,7 +64,10 @@ export const Services = () => {
   })
 
   return (
-    <section className="services-container relative my-[1.5rem] w-full overflow-hidden py-[1.5rem] md:my-[2.5rem] md:py-[2rem]">
+    <section
+      className="services-container relative my-[1.5rem] w-full overflow-hidden py-[1.5rem] md:my-[2.5rem] md:py-[2rem]"
+      id="services"
+    >
       <Container className="flex h-auto flex-col items-center gap-10">
         <SectionHeader
           title="Why build"

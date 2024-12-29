@@ -4,7 +4,6 @@ import { ScrollTrigger } from 'gsap/all'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import React, { useRef } from 'react'
 
-// import Background from '@/../public/images/how-we-build/background.svg'
 import { SectionHeader } from '@/components/shared/SectionHeader'
 import { StepNumber } from '@/components/shared/StepNumber'
 import { Container } from '@/components/system/Container'
@@ -72,6 +71,7 @@ export const HowWeBuild = () => {
     <section
       className="relative my-[1.5rem] flex w-full flex-col overflow-hidden py-[1.5rem] md:my-[2.5rem] md:py-[2rem]"
       ref={sectionRef}
+      id="howto"
     >
       <Background className="absolute left-0 top-[35%] hidden w-full md:block" />
       <div

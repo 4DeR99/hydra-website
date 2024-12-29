@@ -1,1 +1,7 @@
 export { Arrow } from './Arrow'
+export { Facebook } from './Facebook'
+export { Instagram } from './Instagram'
+export { Linkedin } from './Linkedin'
+export { Pinterest } from './Pinterest'
+export { Twitter } from './Twitter'
+export { Youtube } from './Youtube'

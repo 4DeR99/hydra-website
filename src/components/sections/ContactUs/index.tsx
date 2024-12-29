@@ -15,7 +15,7 @@ export const ContactUs = () => {
         <div
           className={cn(
             'flex flex-col rounded-[40px] bg-[radial-gradient(50%_50%_at_center,#433D60,#211E2E)] leading-[1.3]',
-            '~sm/lg:~px-[2.5rem]/[6.875rem] ~sm/lg:~py-[2.5rem]/[5.625rem]',
+            '~sm/lg:~px-[1.5625rem]/[6.875rem] ~sm/lg:~py-[2.5rem]/[5.625rem]',
             'md:rounded-[100px]',
           )}
         >
@@ -83,8 +83,8 @@ const Input = ({ label, placeholder, className, type }: InputProps) => {
       type={type}
       placeholder={placeholder}
       className={cn(
-        'w-full rounded-[35px] border-2 border-white bg-transparent px-[40px] py-[25px] focus:outline-none',
-        'md:rounded-[40px]',
+        'w-full rounded-[35px] border-2 border-white bg-transparent px-[25px] py-[15px] text-sm focus:outline-none',
+        'md:rounded-[40px] md:px-[40px] md:py-[25px]',
         className,
       )}
       aria-label={label}

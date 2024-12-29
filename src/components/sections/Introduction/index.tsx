@@ -12,6 +12,7 @@ export const Introduction = () => {
   return (
     <section
       className={cn('relative mt-[14%] flex w-full flex-col', '2xl:mt-[2%]')}
+      id="about"
     >
       <Image
         src={Shape}
