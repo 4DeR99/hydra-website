@@ -42,12 +42,13 @@ export const HowWeBuild = () => {
         endTrigger: scrollTargets[scrollTargets.length - 1],
         containerAnimation: scrollTween,
         start: 'right 50%',
-        end: 'right 10%',
+        end: 'right 50%',
         scrub: 1,
       },
     })
 
     scrollTargets.forEach((target, index) => {
+      if (index === 4) return
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: target,

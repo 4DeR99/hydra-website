@@ -24,7 +24,7 @@ export const StepNumber = ({ index, title, className }: StepNumberProps) => {
         </div>
       </div>
       <div className="flex gap-4">
-        <Arrow />
+        <Arrow className="hidden md:block" />
         <div className="text-center text-[1.5rem] md:text-start">{title}</div>
       </div>
     </div>

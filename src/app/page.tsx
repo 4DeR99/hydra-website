@@ -3,6 +3,7 @@
 import Lenis from 'lenis'
 import { useEffect } from 'react'
 
+import { ContactUs } from '@/components/sections/ContactUs'
 import { Hero } from '@/components/sections/Hero'
 import { HowWeBuild } from '@/components/sections/HowWeBuild'
 import { Introduction } from '@/components/sections/Introduction'
@@ -26,6 +27,7 @@ export default function Home() {
       <Services />
       <TechnologiesAndHardware />
       <HowWeBuild />
+      <ContactUs />
     </main>
   )
 }
