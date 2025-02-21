@@ -24,7 +24,6 @@ export const HowWeBuild = () => {
 
     const scrollTween = gsap.to(scrollTargets, {
       xPercent: -100 * (scrollTargets.length - 1),
-      ease: 'none',
       scrollTrigger: {
         trigger: sectionRef.current,
         pin: true,
